@@ -1,0 +1,736 @@
+/* Font Api Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Margin */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+}
+
+/* Scroll Behavior */
+html{
+    scroll-behavior: smooth;
+}
+
+/* Max-width and center padding */
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* navbar styling */
+.navbar {
+    position: fixed; /* means it always stays in the same place even if the page is scrolled: */
+    width: 100%;
+    z-index: 999; /* position for layer, 999 mean paling blkang sekali layer*/
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    padding: 15px 0;
+    background: #2b2a30;
+}
+
+/* Position Center */
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+}
+
+/* Porfo */
+.navbar .logo a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+/* lio. */
+.navbar .logo a span {
+    color: yellow;
+    transition: all 0.3s ease;
+}
+
+/**/
+.navbar.sticky .logo a span {
+    color: #fff;
+}
+
+/* navbar all straight top */
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;  /* for straight line bar */
+}
+
+.navbar .menu li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+/* navbar merah when touched */
+.navbar .menu li a:hover {
+    color: #f1ce05;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #f1ce05;
+}
+
+/* menu btn styling */
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/* scroll up button */
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #f1ce05;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #242130;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Section 1 = home navbar styling */
+.home {
+    display: flex;
+    /* background home picture */
+    background: url("images/home.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Position  Home */
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+
+/* Hello, my name is */
+.home .home-content .text-1 {
+    font-size: 27px;
+}
+
+/* Muhammad Irfan */
+.home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+/* And I'm a ... */
+.home .home-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+/* Youtuber */
+.home .home-content .text-3 span {
+    color: #f1ce05;
+    font-weight: 500;
+}
+
+/* Section -- all similar content styling */
+/* jarak setiap section */
+section {
+    padding: 100px 0;
+    /* background color setiap section */
+    background: #242130;
+}
+
+.about, .skills, .project, .contact, footer{
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .about-content,
+.skills .skills-content,
+.project .project-content,
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Section 1 = About Me */
+/* ayat dibawah setiap section */
+section .title{
+    position: relative; /* positioned relative to its normal position */
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif ;
+}
+
+/* line create */
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+section .title::after{
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    font-size: 20px;
+    color: yellow;
+    padding: 5px;
+    background: #242130;
+    transform: translateX(-50%);
+}
+
+/* Section 1 = 'about me' styling section */
+.about .title::after{
+    content: "who i am";
+}
+
+.about .about-content .left{
+    width: 45%;
+}
+
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.about .about-content .right{
+    width: 55%;
+}
+
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* youtuber span*/
+.about .about-content .right .text span{
+    color: yellow;
+}
+
+/* paragraph p */
+.about .about-content .right p{
+    text-align: justify;
+    color: #fff;
+}
+
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none! important;
+    border-radius: 50%;
+    border: 2px solid crimson! important;
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover{
+    background: crimson!important;
+}
+
+
+
+/* Section 3 = project styling section  */
+.project .title::after{
+    content: "my project";
+}
+
+.project .project-content h1{
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+/* Section 4 = skills styling section  */
+.skills .title::after{
+    content: "what i know";
+}
+
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+
+/* column left */
+.skills .skills-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.skills .skills-content .left p{
+    text-align: justify;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+/* circular */
+.skills .skills-content .left .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px; 
+    margin-bottom: 50px;
+}
+
+
+.skills .skills-content .left .container .circular .circle{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    color: #fff;
+    background: #242130 linear-gradient(to right, transparent 50%, var(--clr) 0);
+}
+
+/* number percentage inside circle */
+.skills .skills-content .left .container .circular .circle h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    z-index: 1;
+    font-weight: 300;
+}
+
+.skills .skills-content .left .container .circular .circle h3 span{
+    font-size: 0.65em;
+    font-weight: 400;
+    
+}
+
+.skills .skills-content .left .container .circular .circle h4{
+    position: relative;
+    text-align: center;
+    padding: 10px 10px; 
+    color: #fff;
+}
+
+
+
+.skills .skills-content .left .container .circular .circle:before{
+    content: "";
+    display: block;
+    height: 100%;
+    margin-left: 50%;
+    transform-origin: left;
+    border-radius: 0 100% 100% 0/50%;
+}
+
+.skills .skills-content .left .container .circular .circle:after{
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border-radius: 50%;
+    /* background: gray; */
+    background: #242130;
+}
+
+/* less 50% */
+.skills .skills-content .left .container .circular .circle:before{
+    background: var(--clr);
+    transform: rotate(calc(((var(--i) - 50) * 0.01turn )));
+}
+
+/* less 25% */
+.skills .skills-content .left .container .circular .circle.less:before{
+    background: #242130;
+    transform: rotate(calc(((var(--i) - 0) * 0.01turn)));
+}
+
+/* column right */
+
+/* bars */
+.skills .skills-content .right .bars{
+    margin-bottom: 10px;
+}
+
+.skills .skills-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+}
+
+/* part progress bar */
+.skills .skills-content .right .bars .line{
+    width: 100%;
+    height: 8px;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+.skills .skills-content .right .bars .line .progress-bar{
+    width: 0%;
+    opacity: 0;
+    height: 100%;
+    background-color: #f1ce05;
+    border-radius: 10px;
+    position: relative;
+    transition: all 4s;
+}
+
+.skills .skills-content .right .text{
+    gap: 20px;
+    height: 35px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.skills .skills-content .right .skills-2 .menu li{
+
+    list-style: none;
+    display: inline-block;  /* for straight line bar */
+    /* box */
+
+    text-align: center;
+    border: 2px solid #f1ce05;
+    background: #f1ce05;
+    border-radius: 6px;
+    margin: 0 0 10px 5px;
+    /* text */
+    color: #242130;
+    font-size: 20px;
+    font-weight: 500;
+  
+}
+
+
+/* Section 'Contact Me' = contact section styling */
+.contact .title::after{
+    content: "get in touch";
+}
+
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact .contact-content .left p{
+    text-align: justify;
+}
+
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+
+/* Get in touch */
+.contact .left .text{
+    color: #fff;
+}
+
+.contact .left p{
+    color: #fff;
+}
+
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: rgb(219, 219, 219); 
+}
+
+.contact .contact-content .info .head{
+    font-weight: 500;
+    color: #fff;
+}
+
+.contact .contact-content .info .sub-title{
+    color: #fff;
+}
+/* Message Me */
+.contact .right .text{
+    color: #fff;
+}
+
+.contact .right form .fields{
+    display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+
+.contact .right form .name{
+    margin-right: 10px;
+}
+
+.contact .right form .email{
+    margin-right: 10px;
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+
+/* Button - Send Message */
+.contact .right form .button{
+    height: 47px;
+    width: 170px;
+}
+
+/* Button - Send Message */
+.contact .right form .button button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #f1ce05;
+    background: #f1ce05;
+    color: #242130;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Button - Send Message */
+.contact .right form .button button:hover{
+    color: #f1ce05;
+    background: none;
+}
+
+/* After sending message */
+#msg{
+    color: #61b752;
+    margin-top: -10px;
+    font-size: 20px;
+    display: block;
+}
+/* footer section styling */
+footer{
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+    text-align: center;
+}
+
+footer span a{
+    color: #f1ce05;
+    text-decoration: none;
+
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+/* responsive media query start */
+@media (max-width: 1300px){
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1104px){
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 991px){
+    .max-width{
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #242130;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+        
+    }
+
+    .navbar .menu.active{
+        left: 0;
+    }
+
+    .navbar .menu li{
+        display: block;
+    }
+
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 70px;
+    }
+    
+    .home .home-content .text-3 {
+        font-size: 35px;
+    }
+
+    .max-width {
+        max-width: 800px;
+    }
+
+    .about .about-content .column{
+        width: 100%;
+    }
+
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .about .about-content .right{
+        flex: 100%;
+    }
+
+    .skills .skills-content .column,
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 690px){
+    .max-width{
+        padding: 0 23px;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 70px;
+    }
+    
+    .home .home-content .text-3 {
+        font-size: 35px;
+    }
+
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+
+    .about .about-content .column{
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px){
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+}
