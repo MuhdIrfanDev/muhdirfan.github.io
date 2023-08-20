@@ -273,6 +273,7 @@ section .title::after{
     gap: 100px 50px;
     padding: 100px 50px;
 }
+
 .project .carousel .card
 {
     position: relative;
@@ -871,4 +872,58 @@ footer span a:hover{
     .home .home-content .text-3{
         font-size: 27px;
     }
+
+        /* project - section */
+        /* card */
+        .project .carousel .card
+        {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 25px 35px;
+            
+            height: 300px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+            transition: 0.5s;    
+        }
+
+        /* original gmbar sebelum tekan */
+        .project .carousel .card .imgBx {
+            width: 90%;
+            height: 50%;
+            border: 2px solid #111;
+        }
+    
+        .project .carousel .card .imgBx img
+        {
+            /* position: absolute; */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    
+        .project .carousel .card .text
+        {
+            position: absolute;
+            top: 200px;
+            width: 100%;
+            padding: 0 30px;
+            height: 35px;
+            overflow: hidden;
+            text-align: center;
+            transition: 0.5s;
+
+        }
+    
+        /* text keluar selepas tekan */
+        .project .carousel .card:hover .text
+        {
+            top: 160px;
+            height: 250px;
+        }
 }
