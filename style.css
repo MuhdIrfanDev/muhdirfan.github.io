@@ -271,7 +271,7 @@ section .title::after{
     align-items: center;
     flex-wrap: wrap;
     gap: 100px 50px;
-    padding: 100px 50px;
+    padding: 50px 50px;
 }
 
 .project .carousel .card
@@ -574,6 +574,25 @@ section .title::after{
     margin-bottom: 10px;
 }
 
+/* position icon */
+.contact .contact-content .left .icon{
+    text-align: center;
+}
+
+/* style icon */
+.contact .contact-content .left .icon i{
+    font-size: 30px;
+    color: #fff;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+/* hover bila tekan */
+.contact .contact-content .left .icon i:hover{
+    color: #f1ce05;
+    background: none;
+}
+
 .contact .contact-content .left p{
     text-align: justify;
 }
@@ -717,6 +736,24 @@ footer span a:hover{
     .home .max-width{
         margin-left: 0px;
     }
+
+    .project .carousel .card:hover
+    {
+        height: 420px;
+    }
+    /* original gmbar sebelum tekan */
+    .project .carousel .card .imgBx {
+        width: 90%;
+        height: 65%;
+        border: 2px solid #111;
+    }
+
+    .project .carousel .card:hover .imgBx
+    {
+        top: -40px;
+        scale: 0.55;
+        box-shadow: 0 15px 45px rgba(0,0,0,0.02);
+    }
 }
 
 @media (max-width: 1104px){
@@ -725,15 +762,45 @@ footer span a:hover{
         width: 350px;
     }
 
+    /* original gmbar sebelum tekan */
     .project .carousel .card .imgBx {
         width: 90%;
-        height: 50%;
+        height: 65%;
+        border: 2px solid #111;
+    }
+
+    .project .carousel .card:hover .imgBx
+    {
+        top: -40px;
+        scale: 0.55;
+        box-shadow: 0 15px 45px rgba(0,0,0,0.02);
     }
 }
 
 @media (max-width: 991px){
     .max-width{
         padding: 0 50px;
+    }
+
+    /* original gmbar sebelum tekan */
+    .project .carousel .card .imgBx {
+        width: 90%;
+        height: 70%;
+        border: 2px solid #111;
+    }
+
+    .project .carousel .card:hover .imgBx
+    {
+        top: -40px;
+        scale: 0.55;
+        box-shadow: 0 15px 45px rgba(0,0,0,0.02);
+    }
+
+    /* text keluar selepas tekan */
+    .project .carousel .card:hover .text
+    {
+        top: 200px;
+        height: 250px;
     }
 }
 
@@ -805,6 +872,72 @@ footer span a:hover{
         width: 100%;
         margin-bottom: 35px;
     }
+
+            /* project - section */
+        /* card */
+        .project .carousel .card
+        {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 25px 35px;
+            
+            height: 280px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+            transition: 0.5s;    
+        }
+
+        /* original gmbar sebelum tekan */
+        .project .carousel .card .imgBx {
+            width: 90%;
+            height: 60%;
+            border: 2px solid #111;
+        }
+    
+        .project .carousel .card .imgBx img
+        {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project .carousel .card:hover .imgBx
+        {
+            top: -35px;
+            scale: 0.60;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.02);
+        }
+    
+        /* text */
+        .project .carousel .card .text
+        {
+            position: absolute;
+            top: 200px;
+            width: 100%;
+            padding: 0 30px;
+            height: 35px;
+            overflow: hidden;
+            text-align: center;
+            transition: 0.5s;
+
+        }
+    
+        /* text keluar selepas tekan */
+        .project .carousel .card:hover .text
+        {
+            top: 160px;
+            height: 250px;
+        }
+
+        .project .carousel .card .text h2
+        {
+            font-size: 1.25em;
+            font-weight: 700;
+            color: var(--clr);
+        }
 }
 
 @media (max-width: 690px){
@@ -829,38 +962,55 @@ footer span a:hover{
         width: 50%;
     }
 
+    
     /* project - section */
+    /* original gmbar sebelum tekan */
     .project .carousel .card .imgBx {
-        width: 90%;
-        height: 70%;
+        width: 80%;
+        height: 60%;
+        border: 2px solid #111;
     }
 
     .project .carousel .card .imgBx img
     {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
-        height: 200%;
+        height: 100%;
         object-fit: cover;
     }
 
+    .project .carousel .card:hover .imgBx
+    {
+        top: -35px;
+        scale: 0.6;
+        box-shadow: 0 15px 45px rgba(0,0,0,0.02);
+    }
+
+    /* text */
     .project .carousel .card .text
     {
         position: absolute;
-        top: 250px;
+        top: 200px;
         width: 100%;
         padding: 0 30px;
         height: 35px;
         overflow: hidden;
         text-align: center;
         transition: 0.5s;
+
     }
 
+    /* text keluar selepas tekan */
     .project .carousel .card:hover .text
     {
-        top: 250px;
+        top: 180px;
         height: 250px;
+    }
+
+    .project .carousel .card .text h2
+    {
+        font-size: 1.25em;
+        font-weight: 700;
+        color: var(--clr);
     }
 }
 
@@ -900,7 +1050,7 @@ footer span a:hover{
         .project .carousel .card .imgBx img
         {
             width: 100%;
-            height: 100%;
+            height: 150%;
             object-fit: cover;
         }
 
@@ -928,7 +1078,7 @@ footer span a:hover{
         /* text keluar selepas tekan */
         .project .carousel .card:hover .text
         {
-            top: 125px;
+            top: 160px;
             height: 250px;
         }
 
