@@ -7,7 +7,6 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    
 }
 
 /* Scroll Behavior */
@@ -57,9 +56,9 @@ html{
     transition: all 0.3s ease;
 }
 
-/**/
+/* lio. bila scroll bwh warna tukar */
 .navbar.sticky .logo a span {
-    color: #fff;
+    color: yellow;
 }
 
 /* navbar all straight top */
@@ -68,6 +67,7 @@ html{
     display: inline-block;  /* for straight line bar */
 }
 
+/* navbar di atas */
 .navbar .menu li a {
     color: #fff;
     font-size: 18px;
@@ -76,7 +76,7 @@ html{
     transition: color 0.3s ease;
 }
 
-/* navbar merah when touched */
+/* navbar kuning when touched */
 .navbar .menu li a:hover {
     color: #f1ce05;
 }
@@ -113,6 +113,7 @@ html{
     transition: all 0.3s ease;
 }
 
+/* show button after first section */
 .scroll-up-btn.show{
     bottom: 30px;
     opacity: 1;
@@ -155,7 +156,7 @@ html{
     margin: 5px 0;
 }
 
-/* Youtuber */
+/* Spam typing Developer, etc */
 .home .home-content .text-3 span {
     color: #f1ce05;
     font-weight: 500;
@@ -169,6 +170,7 @@ section {
     background: #242130;
 }
 
+/* semua section Font Style */
 .about, .skills, .project, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
@@ -183,8 +185,7 @@ section {
     justify-content: space-between;
 }
 
-/* Section 1 = About Me */
-/* ayat dibawah setiap section */
+/* ayat ditengah setiap section */
 section .title{
     position: relative; /* positioned relative to its normal position */
     text-align: center;
@@ -257,13 +258,12 @@ section .title::after{
     color: #fff;
 }
 
-/* Section Team */
-/* Section 3 = project styling section  */
+/* Section 2 = project styling section  */
 .project .title::after{
     content: "my project";
 }
 
-/*  Project Carousel + container */
+/*  Project Carousel */
 .project .carousel{
     position: relative;
     display: flex;
@@ -274,30 +274,27 @@ section .title::after{
     padding: 50px 50px;
 }
 
-.project .carousel .card
-{
+/* Card putih */
+.project .carousel .card{
     position: relative;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     padding: 25px 35px;
-    
-    /* width: 340px; */
     height: 300px;
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 35px 80px rgba(0,0,0,0.15);
     transition: 0.5s;
-    
 }
 
-.project .carousel .card:hover
-{
+/* Card putih height selepas tekan */
+.project .carousel .card:hover{
     height: 400px;
 }
 
-.project .carousel .card .imgBx
-{
+/* Seting blkng gambar */
+.project .carousel .card .imgBx{
     position: absolute;
     top: 20px;
     width: 300px;
@@ -308,15 +305,15 @@ section .title::after{
     transition: 0.5s;
 }
 
-.project .carousel .card:hover .imgBx
-{
+/* tekan gambar jd size kecil */
+.project .carousel .card:hover .imgBx{
     top: -20px;
     scale: 0.75;
     box-shadow: 0 15px 45px rgba(0,0,0,0.02);
 }
 
-.project .carousel .card .imgBx img
-{
+/* original size gambar  */
+.project .carousel .card .imgBx img{
     position: absolute;
     top: 0;
     left: 0;
@@ -325,8 +322,8 @@ section .title::after{
     object-fit: cover;
 }
 
-.project .carousel .card .text
-{
+/* text position */
+.project .carousel .card .text{
     position: absolute;
     top: 255px;
     width: 100%;
@@ -337,9 +334,10 @@ section .title::after{
     transition: 0.5s;
 }
 
+/* text position after touch */
 .project .carousel .card:hover .text
 {
-    top: 180px;
+    top: 195px;
     height: 250px;
 }
 
@@ -353,19 +351,6 @@ section .title::after{
 .project .carousel .card .text p
 {
     color: #333;
-}
-
-.project .carousel .card .text a
-{
-    position: relative;
-    top: 15px;
-    display: inline-block;
-    padding: 12px 25px;
-    background: var(--clr);
-    color: #fff;
-    font-weight: 500;
-    text-decoration: 8px;
-    border-radius: 8px;
 }
 
 /* part dot and scroll right/left */
@@ -411,6 +396,7 @@ section .title::after{
     color: #fff;
 }
 
+/* text */
 .skills .skills-content .left p{
     text-align: justify;
     color: #fff;
@@ -428,6 +414,7 @@ section .title::after{
     margin-bottom: 50px;
 }
 
+ 
 .skills .skills-content .left .container .circular .circle{
     position: relative;
     width: 100px;
@@ -454,14 +441,13 @@ section .title::after{
     
 }
 
+/* text bwh circle */
 .skills .skills-content .left .container .circular .circle h4{
     position: relative;
     text-align: center;
     padding: 10px 10px; 
     color: #fff;
 }
-
-
 
 .skills .skills-content .left .container .circular .circle:before{
     content: "";
@@ -541,7 +527,6 @@ section .title::after{
 }
 
 .skills .skills-content .right .skills-2 .menu li{
-
     list-style: none;
     display: inline-block;  /* for straight line bar */
 
@@ -557,7 +542,6 @@ section .title::after{
     font-size: 20px;
     font-weight: 500;
 }
-
 
 /* Section 'Contact Me' = contact section styling */
 .contact .title::after{
@@ -737,22 +721,23 @@ footer span a:hover{
         margin-left: 0px;
     }
 
-    .project .carousel .card:hover
-    {
-        height: 420px;
-    }
     /* original gmbar sebelum tekan */
     .project .carousel .card .imgBx {
         width: 90%;
-        height: 65%;
-        border: 2px solid #111;
+        height: 75%;
     }
 
+    /* tekan gambar jd size kecil */
     .project .carousel .card:hover .imgBx
     {
-        top: -40px;
-        scale: 0.55;
-        box-shadow: 0 15px 45px rgba(0,0,0,0.02);
+        top: -65px;
+        scale: 0.45;
+    }
+
+    /* text position after touch */
+    .project .carousel .card:hover .text
+    {
+        top: 165px;
     }
 }
 
@@ -764,9 +749,7 @@ footer span a:hover{
 
     /* original gmbar sebelum tekan */
     .project .carousel .card .imgBx {
-        width: 90%;
         height: 65%;
-        border: 2px solid #111;
     }
 
     .project .carousel .card:hover .imgBx
@@ -774,6 +757,18 @@ footer span a:hover{
         top: -40px;
         scale: 0.55;
         box-shadow: 0 15px 45px rgba(0,0,0,0.02);
+    }
+
+    /* text position */
+    .project .carousel .card .text{
+        top: 245px;
+        height: 35px;
+        /* position: absolute;
+        width: 100%;
+        padding: 0 30px;
+        overflow: hidden;
+        text-align: center;
+        transition: 0.5s; */
     }
 }
 
@@ -786,21 +781,20 @@ footer span a:hover{
     .project .carousel .card .imgBx {
         width: 90%;
         height: 70%;
-        border: 2px solid #111;
     }
 
     .project .carousel .card:hover .imgBx
     {
-        top: -40px;
+        top: -45px;
         scale: 0.55;
-        box-shadow: 0 15px 45px rgba(0,0,0,0.02);
+        /* box-shadow: 0 15px 45px rgba(0,0,0,0.02); */
     }
 
     /* text keluar selepas tekan */
     .project .carousel .card:hover .text
     {
         top: 200px;
-        height: 250px;
+        /* height: 200px; */
     }
 }
 
@@ -824,7 +818,6 @@ footer span a:hover{
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
-        
     }
 
     .navbar .menu.active{
@@ -873,71 +866,55 @@ footer span a:hover{
         margin-bottom: 35px;
     }
 
-            /* project - section */
-        /* card */
-        .project .carousel .card
-        {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 25px 35px;
-            
-            height: 280px;
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 35px 80px rgba(0,0,0,0.15);
-            transition: 0.5s;    
-        }
+    /* project - section */
+    /* card */
+    /* original gmbar sebelum tekan */
+    .project .carousel .card .imgBx {
+        width: 90%;
+        height: 65%;
+    }
 
-        /* original gmbar sebelum tekan */
-        .project .carousel .card .imgBx {
-            width: 90%;
-            height: 60%;
-            border: 2px solid #111;
-        }
-    
-        .project .carousel .card .imgBx img
-        {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    .project .carousel .card .imgBx img
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
-        .project .carousel .card:hover .imgBx
-        {
-            top: -35px;
-            scale: 0.60;
-            box-shadow: 0 15px 45px rgba(0,0,0,0.02);
-        }
-    
-        /* text */
-        .project .carousel .card .text
-        {
-            position: absolute;
-            top: 200px;
-            width: 100%;
-            padding: 0 30px;
-            height: 35px;
-            overflow: hidden;
-            text-align: center;
-            transition: 0.5s;
+    .project .carousel .card:hover .imgBx
+    {
+        top: -45px;
+        scale: 0.55;
+        /* box-shadow: 0 15px 45px rgba(0,0,0,0.02); */
+    }
 
-        }
-    
-        /* text keluar selepas tekan */
-        .project .carousel .card:hover .text
-        {
-            top: 160px;
-            height: 250px;
-        }
+    /* text */
+    .project .carousel .card .text
+    {
+        top: 240px;
+        height: 35px;
+        /* position: absolute;
+        width: 100%;
+        padding: 0 30px;
+        overflow: hidden;
+        text-align: center;
+        transition: 0.5s; */
 
-        .project .carousel .card .text h2
-        {
-            font-size: 1.25em;
-            font-weight: 700;
-            color: var(--clr);
-        }
+    }
+
+    /* text keluar selepas tekan */
+    .project .carousel .card:hover .text
+    {
+        top: 160px;
+        height: 250px;
+    }
+
+    .project .carousel .card .text h2
+    {
+        font-size: 1.25em;
+        font-weight: 700;
+        color: var(--clr);
+    }
 }
 
 @media (max-width: 690px){
@@ -961,42 +938,34 @@ footer span a:hover{
     .about .about-content .column{
         width: 50%;
     }
-
-    
+ 
     /* project - section */
     /* original gmbar sebelum tekan */
     .project .carousel .card .imgBx {
-        width: 80%;
-        height: 60%;
-        border: 2px solid #111;
-    }
-
-    .project .carousel .card .imgBx img
-    {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        width: 90%;
+        height: 70%;
+        /* border: 2px solid #111; */
     }
 
     .project .carousel .card:hover .imgBx
     {
-        top: -35px;
-        scale: 0.6;
-        box-shadow: 0 15px 45px rgba(0,0,0,0.02);
+        top: -40px;
+        scale: 0.55;
+        /* box-shadow: 0 15px 45px rgba(0,0,0,0.02); */
     }
 
     /* text */
     .project .carousel .card .text
     {
-        position: absolute;
-        top: 200px;
-        width: 100%;
-        padding: 0 30px;
-        height: 35px;
-        overflow: hidden;
-        text-align: center;
-        transition: 0.5s;
+        /* position: absolute; */
+        top: 250px;
 
+        /* width: 100%;
+        padding: 0 30px; */
+        height: 35px;
+        /* overflow: hidden;
+        text-align: center;
+        transition: 0.5s; */
     }
 
     /* text keluar selepas tekan */
@@ -1004,6 +973,7 @@ footer span a:hover{
     {
         top: 180px;
         height: 250px;
+        font-size: 14px;
     }
 
     .project .carousel .card .text h2
@@ -1023,69 +993,69 @@ footer span a:hover{
         font-size: 27px;
     }
 
-        /* project - section */
-        /* card */
-        .project .carousel .card
-        {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 25px 35px;
-            
-            height: 280px;
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 35px 80px rgba(0,0,0,0.15);
-            transition: 0.5s;    
-        }
+    /* project - section */
+    /* card */
+    .project .carousel .card
+    {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 25px 35px;
+        
+        height: 280px;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+        transition: 0.5s;    
+    }
 
-        /* original gmbar sebelum tekan */
-        .project .carousel .card .imgBx {
-            width: 90%;
-            height: 50%;
-            border: 2px solid #111;
-        }
-    
-        .project .carousel .card .imgBx img
-        {
-            width: 100%;
-            height: 150%;
-            object-fit: cover;
-        }
+    /* original gmbar sebelum tekan */
+    .project .carousel .card .imgBx {
+        width: 90%;
+        height: 60%;
+        border: 2px solid #111;
+    }
 
-        .project .carousel .card:hover .imgBx
-        {
-            top: -35px;
-            scale: 0.60;
-            box-shadow: 0 15px 45px rgba(0,0,0,0.02);
-        }
-    
-        /* text */
-        .project .carousel .card .text
-        {
-            position: absolute;
-            top: 200px;
-            width: 100%;
-            padding: 0 30px;
-            height: 35px;
-            overflow: hidden;
-            text-align: center;
-            transition: 0.5s;
+    .project .carousel .card .imgBx img
+    {
+        width: 100%;
+        height: 150%;
+        object-fit: cover;
+    }
 
-        }
-    
-        /* text keluar selepas tekan */
-        .project .carousel .card:hover .text
-        {
-            top: 160px;
-            height: 250px;
-        }
+    .project .carousel .card:hover .imgBx
+    {
+        top: -35px;
+        scale: 0.60;
+        box-shadow: 0 15px 45px rgba(0,0,0,0.02);
+    }
 
-        .project .carousel .card .text h2
-        {
-            font-size: 1.25em;
-            font-weight: 700;
-            color: var(--clr);
-        }
+    /* text */
+    .project .carousel .card .text
+    {
+        position: absolute;
+        top: 200px;
+        width: 100%;
+        padding: 0 30px;
+        height: 35px;
+        overflow: hidden;
+        text-align: center;
+        transition: 0.5s;
+    }
+
+    /* text keluar selepas tekan */
+    .project .carousel .card:hover .text
+    {
+        top: 160px;
+        height: 250px;
+        font-size: 14px;
+    }
+
+    .project .carousel .card .text h2
+    {
+        font-size: 1.25em;
+        font-weight: 700;
+        color: var(--clr);
+    }
 }
