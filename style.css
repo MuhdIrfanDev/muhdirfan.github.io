@@ -1014,7 +1014,6 @@ footer span a:hover{
     .project .carousel .card .imgBx {
         width: 90%;
         height: 60%;
-        border: 2px solid #111;
     }
 
     .project .carousel .card .imgBx img
@@ -1057,5 +1056,11 @@ footer span a:hover{
         font-size: 1.25em;
         font-weight: 700;
         color: var(--clr);
+    }
+
+    /* typing-2 width less 500 */
+    .typing-2::before {
+        content: "\a";
+        white-space: pre;
     }
 }
